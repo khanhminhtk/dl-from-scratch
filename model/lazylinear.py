@@ -25,8 +25,8 @@ class LinearModel(ALinearModel):
         )
         return bias
     
-    def fit(self, X):
-        return torch.mm(X, self.weights) + self.bias
+    def fit(self, X: torch.Tensor) -> torch.Tensor:
+        return X @ self.weights + self.bias
 
     def zero_grad(self):
         self.grad_weights.zero_()

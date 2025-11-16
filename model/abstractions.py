@@ -38,3 +38,14 @@ class AOptimizer(ABC):
     def zero_grad(self):
         """Reset gradients for all parameters."""
         pass
+
+class ASelfAttention(ABC):
+    @abstractmethod
+    def forward(self, X):
+        """Forward pass through the self-attention mechanism."""
+        pass
+
+    # @abstractmethod
+    # def backward(self, grad_output):
+    #     """Backward pass through the self-attention mechanism."""
+    #     pass
